@@ -17,3 +17,8 @@ Código común para servicios Python de ARMAI.
 ```bash
 git submodule add git@github.com:jigc4200/armai-shared.git shared
 ```
+
+## Jira
+
+- Nombre: armai-shared
+- Proyecto (clave sugerida): SHR
