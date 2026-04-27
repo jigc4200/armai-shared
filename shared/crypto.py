@@ -17,10 +17,10 @@ def _get_fernet() -> Fernet:
     global _fernet
 
     if _fernet is None:
-        key = os.getenv("ENCRYPTION_KEY")
+        key = os.getenv("ENCRYPTION_KEY") or os.getenv("FERNET_KEY")
         if not key:
             raise ValueError(
-                "ENCRYPTION_KEY environment variable is required. "
+                "ENCRYPTION_KEY or FERNET_KEY environment variable is required. "
                 'Generate one with: python -c "from cryptography.fernet import Fernet; '
                 'print(Fernet.generate_key().decode())"'
             )
